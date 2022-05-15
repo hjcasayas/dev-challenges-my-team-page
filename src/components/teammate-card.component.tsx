@@ -40,6 +40,7 @@ export const TeammateCardComponent: FunctionComponent<
             height={682}
             layout="responsive"
             alt={name}
+            priority={index != null && index < 3}
           />
         </div>
         <p className="text-lg font-bold">{name}</p>
