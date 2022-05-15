@@ -18,7 +18,7 @@ RUN npm install -g npm && \
     npm install -g pnpm && \
     pnpm install
 COPY . /app/
-RUN rm .env.production.local && pnpm run build
+RUN pnpm run build
 
 FROM base AS staging
 WORKDIR /app
