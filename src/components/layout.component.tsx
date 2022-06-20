@@ -1,7 +1,13 @@
 import Head from "next/head";
-import { FunctionComponent } from "react";
+import { FunctionComponent, ReactNode } from "react";
 
-export const LayoutComponent: FunctionComponent = ({ children }) => {
+interface ILayoutComponentProps {
+  children: ReactNode;
+}
+
+export const LayoutComponent: FunctionComponent<ILayoutComponentProps> = ({
+  children,
+}) => {
   return (
     <>
       <Head>
